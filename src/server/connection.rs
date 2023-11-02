@@ -1402,12 +1402,7 @@ impl Connection {
         #[cfg(feature = "flutter")]
         #[cfg(not(any(target_os = "android", target_os = "ios")))]
         {
-            let access_mode = Config::get_option("access-mode");
-            if access_mode == "full" {
-                return true;
-            } else if access_mode == "view" {
-                return false;
-            }
+            return false;
         }
         return Config::get_option(enable_prefix_option).is_empty();
     }
