@@ -883,6 +883,7 @@ impl Config {
                 Config::set_id(&id);
             }
         }
+        id
     }
 
     pub fn get_id_or(b: String) -> String {
